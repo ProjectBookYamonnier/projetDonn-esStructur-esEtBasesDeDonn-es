@@ -1,0 +1,137 @@
+BIBLIOTHEQUE {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #2e2b2b;
+  overflow: auto;
+}
+
+BIBLIOTHEQUE titre {
+  font-family: monospace;
+  text-decoration: dotted;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+}
+
+BIBLIOTHEQUE glossaire {
+  display: block;
+  font: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+glossaire [def]:before {
+  text-decoration: underline;
+  content: "" attr(def) " : ";
+}
+
+MEDIA glossaire {
+  display: block;
+  margin-top: 7px;
+  font: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+}
+
+mot {
+  display: block;
+
+}
+
+MEDIA {
+  margin-left: 10px;
+  margin-bottom: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+
+MEDIA[type="Série"] {
+  background-color: rgb(9, 57, 90);
+}
+
+MEDIA[type="Film"] {
+  background-color: rgb(51, 2, 2);
+}
+
+MEDIA titre {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+CATEGORIE {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+categorie_age {
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+  margin-top: 5px;
+  padding: 5px;
+  display: inline-block;
+  background-color: #ffffff
+}
+
+PARLE_DE {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+categorie_age:before {
+  content: "Interdit aux -";
+}
+
+categorie_age:after {
+  content: " ans";
+}
+
+JOUE_DANS {
+  display: block;
+  border: double;
+  margin-top: 5px;
+  text-align: start;
+}
+
+JOUE_DANS:before {
+  text-decoration: underline;
+  content: "Distribution :";
+  margin-left: 5px;
+
+}
+
+ACTEUR {
+  display: block;
+  text-align: center;
+  margin-top: 3px;
+}
+
+ACTEUR prenom {
+  font: normal;
+}
+
+ACTEUR nom {
+  font: bolder;
+}
+
+/* Supprimer les styles pour les éléments non utilisés */
+nb_saisons,
+nb_ep,
+duree_moy_ep,
+annee_sortie,
+duree {
+  display: none;
+}

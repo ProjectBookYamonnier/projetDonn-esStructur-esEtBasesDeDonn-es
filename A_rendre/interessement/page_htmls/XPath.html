@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+    <title>Nos requête XPath</title>
+    <link rel="website icon" type="png" href="logo.png" />
+    <link rel="stylesheet" type="text/css" href="Q10b-HTML.css" />
+    <style type="text/css">
+        .footer {
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li><a href="Q9-HTML.html">Accueil</a></li>
+                <li><a href="Equipe.html">Notre &#201;quipe</a></li>
+                <li><a href="NotreProjet.html">Notre Projet</a></li>
+                <li><a href="XML_DTD.html">DTD &amp; XML</a></li>
+                <li><a href="XPath.html">Les requètes XPath</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Nos requêtes XPath</h1>
+        <div class="section">
+            <h2>Requète XPath sur l'XML</h2>
+            <h3>a - Requête XPath pour fournir le contenu des éléments &lt;glossaire><br /></h3>
+            <img src="requete1.png" alt="requete 1" />
+            <code><br/>//glossaire/mot/@def | //glossaire/mot/text()</code>
+            <p>Cette requête renvoie le contenu des éléments &lt;mot> qui sont les enfants de l'élément &lt;glossaire> .
+                Plus précisément, elle renvoie la valeur de l'attribut "def" pour chaque élément &lt;mot> ainsi que le
+                contenu textuel de chaque élément &lt;mot>.</p>
+            <h3>b - Requête XPath pour fournir le premier élément &lt;glossaire><br /></h3>
+            <img src="requete2.png" alt="requete 2" class="reqdemi" />
+            <code><br/>//glossaire[1]</code>
+            <p>Cette requête renvoie le premier élément &lt;glossaire> qui est un enfant direct de l'élément
+                &lt;BIBLIOTHEQUE>.</p>
+            <h3>c - Requête XPath pour fournir les éléments &lt;glossaire> n'ayant pas d'attribut auteur<br /></h3>
+            <img src="requete3.png" alt="requete 3" class="reqdemi" />
+            <code><br/>//glossaire[1]</code>
+            <p>
+                Cette requête renvoie les éléments &lt;glossaire> qui ont au moins un enfant &lt;mot> sans attribut
+                "auteur".
+                La fonction non() est utilisée pour sélectionner les éléments pour lesquels l'expression
+                mot/@auteur est fausse.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Requète XPath sur l'XHTML</h2>
+            <h3>d - Pour fournir les valeurs des attributs href dans un document XHTML<br /></h3>
+            <img src="requete4.png" alt="requete 4" />
+            <code><br/>//a/@href</code>
+            <p>Cette requête va renvoyer toutes les valeurs de l'attribut href dans le document XHTML.</p>
+            <h3>e - Pour compter le nombre d'images dans un document XHTML<br /></h3>
+            <img src="requete5.png" alt="requete 5" />
+            <code><br/>count(//img)</code>
+            <p>Cette requête va renvoyer toutes les valeurs de l'attribut href dans le document XHTML.</p>
+        </div>
+        <div class="footer">
+            <p>Cette page a &#233;t&#233; &#233;crite par Yann, Mathis et Kawrantin</p>
+            <div class="nav">
+                <ul>
+                    <li><a href="https://validator.w3.org/#validate_by_uri+with_options" target="_blank">Lien de
+                            validation pour les fichier XHTML</a></li>
+                    <li><a href="https://www.xmlvalidation.com/" target="_blank">Lien de validation pour les fichier XML
+                            et DTD</a></li>
+                    <li><a href="https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_upload"
+                            target="_blank">Lien de validation pour les fichier CSS</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

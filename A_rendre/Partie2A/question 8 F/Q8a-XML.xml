@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Bibliotheque.css" type="text/css"?>
+<!DOCTYPE BIBLIOTHEQUE SYSTEM "Q7-DTD.dtd">
+
+<BIBLIOTHEQUE>
+	<titre>La Vidéothèque</titre>
+	<glossaire>
+		<mot def="Element Rouge">Ce sont des Films</mot>
+		<mot def="Element Bleu">Ce sont des Séries</mot>
+	</glossaire>
+	<MEDIA type="Série">
+		<titre>Arrow</titre>
+		<nb_saisons>8 saisons</nb_saisons>
+		<nb_ep>170 épisodes</nb_ep>
+		<duree_moy_ep>de 42 minutes</duree_moy_ep>
+		<categorie_age>16</categorie_age>
+		<annee_sortie>2011</annee_sortie>
+		<CATEGORIE>Action</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Stephen</nom>
+				<prenom>Amell</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Cassidy</nom>
+				<prenom>Katie</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>David</nom>
+				<prenom>Ramsey</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Colton</nom>
+				<prenom>Haynes</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Willa</nom>
+				<prenom>Holland</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Action">Un média d'action est un média dont l'intrigue s'articule plus ou moins habilement autour d'une succession de scènes spectaculaires souvent stéréotypées (course-poursuites, fusillades, explosions…) et met en place un conflit qui sera résolu de manière violente (généralement, la mort des ennemis du héros).</mot>
+		</glossaire>
+	</MEDIA>
+    <MEDIA type="Film">
+		<titre>Avatar</titre>
+		<categorie_age>12</categorie_age>
+		<annee_sortie>2009</annee_sortie>
+		<duree>162 minutes</duree>
+		<CATEGORIE>Science-Fiction</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Lang</nom>
+				<prenom>Stephen</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Worthington</nom>
+				<prenom>Sam</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Saldana</nom>
+				<prenom>Zoe</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Sigourney</nom>
+				<prenom>Weaver</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<PARLE_DE>Parle des dégâts de l'homme</PARLE_DE>
+		<PARLE_DE>Parle de la biodiversité</PARLE_DE>
+		<glossaire>
+			<mot def="Science-Fiction">Il utilise des représentations fictives, souvent basées sur la science, qui ne sont pas entièrement acceptées par la science traditionnelle, telles que par exemple les formes de vie extraterrestre, les mondes extraterrestres, la perception extrasensorielle et les voyages dans le temps.</mot>
+		</glossaire>
+	</MEDIA>
+</BIBLIOTHEQUE>

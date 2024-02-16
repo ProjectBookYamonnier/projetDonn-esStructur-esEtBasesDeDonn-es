@@ -1,0 +1,401 @@
+body {
+	background: rgba(248, 251, 252, 1);
+	background-image: url(piste-de-danse-3.jpg);
+	z-index: 10;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+h1 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 250%;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 3px;
+	color: rgb(252, 230, 230);
+	text-shadow: 4px 2px 0px #240000, -4px -2px 0px #240000, 4px -2px 0px #240000, -4px 2px 0px #240000;
+}
+
+h2 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 250%;
+	letter-spacing: 3px;
+	color: rgb(57, 128, 46);
+}
+
+h3 {
+	margin: auto;
+	color: red;
+	text-decoration: underline;
+	font-size: 150%;
+	margin-bottom: 10px;
+}
+
+.section {
+	margin-bottom: 10px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: #f1f1f1;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+table {
+	box-shadow: 0 2px 30px rgba(0, 0, 0, 0.37);
+	cursor: pointer;
+	table-layout: fixed;
+	margin: auto;
+	width: 70%;
+	border-collapse: collapse;
+	border: 1.5mm ridge rgb(128, 1, 1);
+	opacity: 0.8;
+}
+
+th,
+td {
+	padding: 15px;
+	text-align: center;
+}
+
+th {
+	font-size: 150%;
+	letter-spacing: 2px;
+	background: rgb(204, 175, 175);
+}
+
+td {
+	font-size: 120%;
+	letter-spacing: 1px;
+	background: rgb(243, 220, 220);
+}
+
+th,
+td {
+	border: 1px dashed rgb(73, 1, 1);
+}
+
+.logo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3%;
+	margin-right: 20px;
+}
+
+.mcd {
+	width: 30%;
+	margin: auto;
+}
+
+.netflix_home_page {
+	width: 53%;
+	margin: auto;
+}
+
+.main {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.code {
+	display: flex;
+	flex-direction: column;
+	background-color: #f1f1f1;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+a {
+	background: rgb(200, 26, 26);
+	border: 2px solid black;
+	padding: 10px;
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	color: white;
+	border-radius: 20px;
+	font-size: 25px;
+}
+
+.bouton {
+	text-align: center;
+}
+
+/* Style de la barre de navigation */
+.nav {
+	/* display: flex; */
+	border-radius: 20px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	opacity: 0.8;
+}
+
+/* Style des liens */
+.nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.nav ul li {
+	margin-right: auto;
+	align-items: center;
+}
+
+.nav ul li:last-child {
+	margin-right: 0;
+}
+
+.header .nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.header .nav ul li a:hover {
+	color: #ff0;
+}
+
+.section ul li {
+	margin-left: 350px;
+	margin-right: 350px;
+	text-align: justify;
+}
+
+.mega-menu__content ul li a:hover {
+	background-color: #f2f2f2;
+}
+
+.footer p {
+	display: inline;
+	color: white;
+}
+
+table {
+	position: relative;
+	z-index: 1;
+}
+
+.other-element {
+	position: relative;
+	z-index: 0;
+}
+
+/* Les images */
+
+@keyframes shake {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	25% {
+		transform: translate(20px, -20px);
+	}
+
+	50% {
+		transform: translate(0, -40px);
+	}
+
+	75% {
+		transform: translate(-20px, -20px);
+	}
+
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.mew {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	animation-name: shake;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	width: 20%;
+}
+
+.mew2 {
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	width: 10%;
+}
+
+
+
+.power {
+	position: absolute;
+	animation-name: running;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	z-index: 2;
+}
+
+.kobeni {
+	position: absolute;
+	animation-name: running;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	width: 10%;
+	z-index: 1;
+}
+
+.kobeni2 {
+	position: absolute;
+	animation-name: running;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	width: 15%;
+	z-index: 1;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.lezard {
+	position: absolute;
+	animation: rotation 0.5s infinite linear;
+	margin: auto;
+	width: 20%;
+	z-index: 0;
+}
+
+.rick {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	opacity: 0.7;
+	width: 22%;
+	z-index: 0;
+}
+
+.snoopDog {
+	position: absolute;
+	bottom: 0;
+	left: 70%;
+	opacity: 0.7;
+	width: 22%;
+	z-index: 0;
+}
+
+.pochita {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.pochita2 {
+	position: absolute;
+	top: 32%;
+	right: 0;
+}
+
+.duck2 {
+	position: absolute;
+	top: 32%;
+	left: 35%;
+	animation: rotation 1s infinite
+}
+
+.kobeni-moving {
+	position: absolute;
+	animation: move 60s linear infinite;
+	width: 17%;
+}
+
+@keyframes move {
+	0% {
+		bottom: 0;
+		left: 0;
+	}
+
+	50% {
+		bottom: 0;
+		left: calc(100% - 400px);
+	}
+
+	100% {
+		bottom: 0;
+		left: 0;
+	}
+}
+
+@keyframes running {
+	0% {
+		bottom: 0;
+		left: -10%;
+	}
+
+	100% {
+		bottom: 0;
+		left: 100%;
+	}
+}
+
+@keyframes spin {
+	0% {
+		top: 50px;
+		left: 50px;
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+
+	100% {
+		top: 50px;
+		left: 50px;
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+.kobeni-spinning {
+	position: absolute;
+	display: inline-block;
+	animation: spin 1s linear infinite;
+	width: 4%
+}
+
+.duck {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 10%;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+
+.reqdemi {
+	width: 50%;
+	margin: auto;
+}

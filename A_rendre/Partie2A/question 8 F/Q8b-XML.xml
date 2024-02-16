@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Bibliotheque.css" type="text/css"?>
+<!DOCTYPE BIBLIOTHEQUE SYSTEM "Q7-DTD.dtd">
+
+<BIBLIOTHEQUE>
+	<titre>La Vidéothèque</titre>
+	<glossaire>
+		<mot def="Element Rouge">Ce sont des Films</mot>
+		<mot def="Element Bleu">Ce sont des Séries</mot>
+	</glossaire>
+	<MEDIA type="Série">
+		<titre>Arrow</titre>
+		<nb_saisons>8 saisons</nb_saisons>
+		<nb_ep>170 épisodes</nb_ep>
+		<duree_moy_ep>de 42 minutes</duree_moy_ep>
+		<categorie_age>16</categorie_age>
+		<annee_sortie>2011</annee_sortie>
+		<CATEGORIE>Action</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Stephen</nom>
+				<prenom>Amell</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Cassidy</nom>
+				<prenom>Katie</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>David</nom>
+				<prenom>Ramsey</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Colton</nom>
+				<prenom>Haynes</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Willa</nom>
+				<prenom>Holland</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Action">Un média d'action est un média dont l'intrigue s'articule plus ou moins habilement autour d'une succession de scènes spectaculaires souvent stéréotypées (course-poursuites, fusillades, explosions…) et met en place un conflit qui sera résolu de manière violente (généralement, la mort des ennemis du héros).</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Film">
+		<titre>Avatar</titre>
+		<categorie_age>12</categorie_age>
+		<annee_sortie>2009</annee_sortie>
+		<duree>162 minutes</duree>
+		<CATEGORIE>Science-Fiction</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Lang</nom>
+				<prenom>Stephen</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Worthington</nom>
+				<prenom>Sam</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Saldana</nom>
+				<prenom>Zoe</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Sigourney</nom>
+				<prenom>Weaver</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<PARLE_DE>Parle des dégâts de l'homme</PARLE_DE>
+		<PARLE_DE>Parle de la biodiversité</PARLE_DE>
+		<glossaire>
+			<mot def="Science-Fiction">Il utilise des représentations fictives, souvent basées sur la science, qui ne sont pas entièrement acceptées par la science traditionnelle, telles que par exemple les formes de vie extraterrestre, les mondes extraterrestres, la perception extrasensorielle et les voyages dans le temps.</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Série">
+		<titre>Friends</titre>
+		<nb_saisons>10 saisons</nb_saisons>
+		<nb_ep>236 épisodes</nb_ep>
+		<duree_moy_ep>de 22 minutes</duree_moy_ep>
+		<categorie_age>13</categorie_age>
+		<annee_sortie>2003</annee_sortie>
+		<CATEGORIE>Comédies</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Aniston</nom>
+				<prenom>Jennifer</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Cox</nom>
+				<prenom>Courteney</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Perry</nom>
+				<prenom>Matthew</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>LeBlanc</nom>
+				<prenom>Matt</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Schwimmer</nom>
+				<prenom>David</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Kudrow</nom>
+				<prenom>Lisa</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Comédies"> Traditionnellement on attend de ces films une fin heureuse (happy end), même si le genre de la comédie noire peut déroger à ce prérequis.</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Film">
+		<titre>Murder Mystery</titre>
+		<categorie_age>13</categorie_age>
+		<annee_sortie>2019</annee_sortie>
+		<duree>98</duree>
+		<CATEGORIE>Comédies</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Aniston</nom>
+				<prenom>Jennifer</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Sandler</nom>
+				<prenom>Adam</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Boon</nom>
+				<prenom>Dany</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Evan</nom>
+				<prenom>Luke</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Comédies"> Traditionnellement on attend de ces films une fin heureuse (happy end), même si le genre de la comédie noire peut déroger à ce prérequis.</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Film">
+		<titre>Okja</titre>
+		<categorie_age>13</categorie_age>
+		<annee_sortie>2017</annee_sortie>
+		<duree>121</duree>
+		<CATEGORIE>Drames</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Tilda</nom>
+				<prenom>Swinton</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Gyllenhaal</nom>
+				<prenom>Jake</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Dano</nom>
+				<prenom>Paul</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Seo-hyeon</nom>
+				<prenom>Ahn</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<PARLE_DE>Parle des animaux</PARLE_DE>
+		<glossaire>
+			<mot def="Drames">Le drame est un genre cinématographique qui traite des situations généralement non épiques dans un contexte sérieux, sur un ton plus susceptible d'inspirer la tristesse que le rire.</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Film">
+		<titre>Princesse Mononoké</titre>
+		<categorie_age>10</categorie_age>
+		<annee_sortie>1997</annee_sortie>
+		<duree>134</duree>
+		<CATEGORIE>Drames</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Matsuda</nom>
+				<prenom>Yōji</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Ishida</nom>
+				<prenom>Yuriko</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Drames">Le drame est un genre cinématographique qui traite des situations généralement non épiques dans un contexte sérieux, sur un ton plus susceptible d'inspirer la tristesse que le rire.</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Film">
+		<titre>Ted</titre>
+		<categorie_age>16</categorie_age>
+		<annee_sortie>2012</annee_sortie>
+		<duree>106</duree>
+		<CATEGORIE>Comédies</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Wahlberg</nom>
+				<prenom>Mark</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Mac-Farlan</nom>
+				<prenom>Seth</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Kunis</nom>
+				<prenom>Mila</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Ribisi</nom>
+				<prenom>Giovanni</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Comédies"> Traditionnellement on attend de ces médias une fin heureuse (happy end), même si le genre de la comédie noire peut déroger à ce prérequis.</mot>
+		</glossaire>
+	</MEDIA>
+	<MEDIA type="Film">
+		<titre>WALL-E</titre>
+		<categorie_age>6</categorie_age>
+		<annee_sortie>2008</annee_sortie>
+		<duree>98</duree>
+		<CATEGORIE>Dessin Animé</CATEGORIE>
+		<JOUE_DANS>
+			<ACTEUR>
+				<nom>Burtt</nom>
+				<prenom>Ben</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Knight</nom>
+				<prenom>Elissa</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Stanton</nom>
+				<prenom>Andrew</prenom>
+			</ACTEUR>
+			<ACTEUR>
+				<nom>Sigourney</nom>
+				<prenom>Weaver</prenom>
+			</ACTEUR>
+		</JOUE_DANS>
+		<glossaire>
+			<mot def="Dessin Animé">Média réalisé à partir d'une série de dessins qui décomposent les mouvements des personnages et qui, projetés, donnent l'impression d'un mouvement continu.</mot>
+		</glossaire>
+	</MEDIA>
+</BIBLIOTHEQUE>

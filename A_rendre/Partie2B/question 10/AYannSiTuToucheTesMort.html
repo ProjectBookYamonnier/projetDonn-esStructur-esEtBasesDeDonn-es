@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<link rel="stylesheet" type="text/css" href="XHTML.css" />
+
+<head>
+	<title>Présentation XML</title>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<main>
+		<h1>DTD & XML</h1>
+		<section class="Code">
+			<h2>Code DTD</h2>
+			<p>Voici la DTD de notre projet en XML</p>
+			<code>
+				&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+				&lt;!ELEMENT BIBLIOTHEQUE (titre, glossaire*, MEDIA+)&gt;<br>
+				&lt;!ELEMENT glossaire (mot+)&gt;<br>
+				&lt;!ATTLIST glossaire auteur CDATA #IMPLIED><br>
+				&lt;!ELEMENT mot (#PCDATA)&gt;<br>
+				&lt;!ATTLIST mot def CDATA #REQUIRED&gt;<br>
+				&lt;!ELEMENT MEDIA (titre, nb_saisons?, nb_ep?, duree_moy_ep?, categorie_age, annee_sortie, duree?, CATEGORIE, JOUE_DANS, PARLE_DE*, glossaire*)&gt;<br>
+				&lt;!ATTLIST MEDIA type CDATA #REQUIRED&gt;<br>
+				&lt;!ELEMENT titre (#PCDATA)&gt;<br>
+				&lt;!ELEMENT nb_saisons (#PCDATA)&gt;<br>
+				&lt;!ELEMENT nb_ep (#PCDATA)&gt;<br>
+				&lt;!ELEMENT duree_moy_ep (#PCDATA)&gt;<br>
+				&lt;!ELEMENT categorie_age (#PCDATA)&gt;<br>
+				&lt;!ELEMENT annee_sortie (#PCDATA)&gt;<br>
+				&lt;!ELEMENT duree (#PCDATA)&gt;<br>
+				&lt;!ELEMENT ACTEUR (nom, prenom)&gt;<br>
+				&lt;!ELEMENT nom (#PCDATA)&gt;<br>
+				&lt;!ELEMENT prenom (#PCDATA)&gt;<br>
+				&lt;!ELEMENT JOUE_DANS (ACTEUR+)&gt;<br>
+				&lt;!ELEMENT CATEGORIE (#PCDATA)&gt;<br>
+				&lt;!ELEMENT PARLE_DE (#PCDATA)&gt;<br>
+        	</code>
+		</section>
+		<section class="Code">
+			<h2>Code XML</h2>
+			<p>Ceci est un exemple de section Code centrée sur la page.</p>
+			<code>
+				&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+                &lt;?xml-stylesheet href="Bibliotheque.css" type="text/css"?&gt;<br>
+                &lt;!DOCTYPE BIBLIOTHEQUE SYSTEM "DTD_Projet.dtd"&gt;<br>
+                <br>
+                &lt;BIBLIOTHEQUE&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;titre&gt;La Vidéothèque&lt;/titre&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Element Rouge"&gt;Ce sont des Films&lt;/mot&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Element Bleu"&gt;Ce sont des Séries&lt;/mot&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;MEDIA type="Série"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Arrow&lt;/titre&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nb_saisons&gt;8 saisons&lt;/nb_saisons&gt;<br>
+            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nb_ep&gt;170 épisodes&lt;/nb_ep&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree_moy_ep&gt;de 42 minutes&lt;/duree_moy_ep&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;16&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2011&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Action&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Stephen&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Amell&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Cassidy&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Katie&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;David&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Ramsey&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Colton&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Haynes&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Willa&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Holland&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Action"&gt;Un média d'action est un média dont l'intrigue s'articule plus ou moins habilement autour d'une succession de scènes spectaculaires souvent stéréotypées (course-poursuites, fusillades, explosions…) et met en place un conflit qui sera résolu de manière violente (généralement, la mort des ennemis du héros).&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Film"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Avatar&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;12&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2009&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree&gt;162 minutes&lt;/duree&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Science-Fiction&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Lang&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Stephen&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Worthington&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Sam&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Saldana&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Zoe&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Sigourney&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Weaver&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PARLE_DE&gt;Parle des dégâts de l'homme&lt;/PARLE_DE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PARLE_DE&gt;Parle de la biodiversité&lt;/PARLE_DE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Science-Fiction"&gt;Il utilise des représentations fictives, souvent basées sur la science, qui ne sont pas entièrement acceptées par la science traditionnelle, telles que par exemple les formes de vie extraterrestre, les mondes extraterrestres, la perception extrasensorielle et les voyages dans le temps.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Série"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Friends&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nb_saisons&gt;10 saisons&lt;/nb_saisons&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nb_ep&gt;236 épisodes&lt;/nb_ep&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree_moy_ep&gt;de 22 minutes&lt;/duree_moy_ep&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;13&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2003&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Comédies&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Aniston&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Jennifer&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Cox&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Courteney&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Perry&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Matthew&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;LeBlanc&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Matt&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Schwimmer&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;David&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Kudrow&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Lisa&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Comédies"&gt; Traditionnellement on attend de ces films une fin heureuse (happy end), même si le genre de la comédie noire peut déroger à ce prérequis.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Film"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Murder Mystery&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;13&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2019&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree&gt;98&lt;/duree&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Comédies&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Aniston&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Jennifer&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Sandler&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Adam&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Boon&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Dany&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Evan&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Luke&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Comédies"&gt; Traditionnellement on attend de ces films une fin heureuse (happy end), même si le genre de la comédie noire peut déroger à ce prérequis.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Film"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Okja&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;13&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2017&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree&gt;121&lt;/duree&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Drames&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Tilda&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Swinton&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Gyllenhaal&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Jake&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Dano&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Paul&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Seo-hyeon&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Ahn&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PARLE_DE&gt;Parle des animaux&lt;/PARLE_DE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Drames"&gt;Le drame est un genre cinématographique qui traite des situations généralement non épiques dans un contexte sérieux, sur un ton plus susceptible d'inspirer la tristesse que le rire.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Film"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Princesse Mononoké&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;10&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;1997&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree&gt;134&lt;/duree&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Drames&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Matsuda&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Yōji&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Ishida&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Yuriko&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Drames"&gt;Le drame est un genre cinématographique qui traite des situations généralement non épiques dans un contexte sérieux, sur un ton plus susceptible d'inspirer la tristesse que le rire.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Film"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;Ted&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;16&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2012&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree&gt;106&lt;/duree&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Comédies&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Wahlberg&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Mark&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Mac-Farlan&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Seth&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Kunis&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Mila&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Ribisi&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Giovanni&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Comédies"&gt; Traditionnellement on attend de ces médias une fin heureuse (happy end), même si le genre de la comédie noire peut déroger à ce prérequis.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;MEDIA type="Film"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;titre&gt;WALL-E&lt;/titre&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;categorie_age&gt;6&lt;/categorie_age&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;annee_sortie&gt;2008&lt;/annee_sortie&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;duree&gt;98&lt;/duree&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;CATEGORIE&gt;Dessin Animé&lt;/CATEGORIE&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;JOUE_DANS&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Burtt&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Ben&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Knight&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Elissa&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Stanton&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Andrew&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nom&gt;Sigourney&lt;/nom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;prenom&gt;Weaver&lt;/prenom&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ACTEUR&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/JOUE_DANS&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mot def="Dessin Animé"&gt;Média réalisé à partir d'une série de dessins qui décomposent les mouvements des personnages et qui, projetés, donnent l'impression d'un mouvement continu.&lt;/mot&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/glossaire&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;/MEDIA&gt;<br>
+                &lt;/BIBLIOTHEQUE&gt;<br>
+        	</code>
+		</section>
+	</main>
+</body>
+
+</html>

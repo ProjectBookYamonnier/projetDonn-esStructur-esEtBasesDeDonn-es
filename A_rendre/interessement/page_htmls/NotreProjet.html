@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+    <title>Pr&#233;sentation XML</title>
+    <link rel="website icon" type="png" href="logo.png" />
+    <link rel="stylesheet" type="text/css" href="Q10b-HTML.css" />
+    <style type="text/css">
+        .footer {
+            bottom: 0;
+            width: 100%;
+        }
+
+        .section p {
+            margin-left: 350px;
+            margin-right: 350px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li><a href="Q9-HTML.html">Accueil</a></li>
+                <li><a href="Equipe.html">Notre &#201;quipe</a></li>
+                <li><a href="NotreProjet.html">Notre Projet</a></li>
+                <li><a href="XML_DTD.html">DTD &amp; XML</a></li>
+                <li><a href="XPath.html">Les requètes XPath</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Notre Projet</h1>
+        <div class="section">
+            <h2>Notre domaine</h2>
+            <p>Notre domaine d&apos;application est une plateforme de streaming inspir&#233; de Netflix. Nous y stockons
+                des informations sur le client, les m&#233;dias (films et s&#233;ries), les acteurs, les cat&#233;gories
+                et la sensibilit&#233;
+                environnementale abord&#233;e par le m&#233;dia. De plus, nous stockons &#233;galement des informations
+                sur la
+                progression de visionnage et qui joue dans quoi.</p>
+            <img src="image_page_netlfix.png" alt="image d'accueil de Netflix" class="netflix_home_page" />
+        </div>
+        <div class="bouton">
+            <a href="https://www.netflix.com/fr/" target="_blank">Site de Netflix</a>
+        </div>
+        <div class="section">
+            <h2>Le MCD de notre projet</h2>
+            <img src="mcd_projet.png" alt="Le MCD du projet" class="mcd" />
+            <h3>Les Entit&#233;s</h3>
+            <p>Le client correspond &#224; l&apos;utilisateur courant de la plateforme de streaming.<br />
+                <strong>CLIENT</strong> (username, email) :
+            </p>
+            <ul>
+                <li>username : Correspond au nom d&apos;utilisateur du client (Cl&#233; primaire)</li>
+                <li>email : Correspond &#224; l&apos;e-mail du client</li>
+            </ul>
+            <p>
+                Un m&#233;dia correspond &#224; une proposition d&apos;une r&#233;alisation audiovisuelle aux clients,
+                il peut être une s&#233;rie ou un film.<br />
+                <strong>MEDIA</strong> (titre, nb_saisons, nb_ep, duree_moy_ep, categorie_age, annee_sortie, type,
+                duree)
+            </p>
+            <ul>
+                <li>titre : Correspond au nom du m&#233;dia (Cl&#233; primaire)</li>
+                <li>nb_saisons : Correspond au nombre de saison(s) pr&#233;sente dans une s&#233;rie</li>
+                <li>nb_ep : Correspond au nombre d&apos;&#233;pisode(s) pr&#233;sente dans une s&#233;rie</li>
+                <li>duree_moy_ep : Correspond &#224; la dur&#233;e moyenne de tous les &#233;pisodes
+                    d&apos;unes&#233;rie</li>
+                <li>categorie_age : Correspond &#224; la cat&#233;gorie d&apos;âge du m&#233;dia</li>
+                <li>annee_sortie : Correspond &#224; l&apos;ann&#233;e de sortie du m&#233;dia</li>
+                <li>type : Correspond soit &#224; une s&#233;rie soit &#224; un film</li>
+                <li>duree : Correspond &#224; la dur&#233;e d&apos;un film ou &#224; NULL si c&apos;est une s&#233;rie
+                </li>
+            </ul>
+            <p>
+                Acteur qui joue dans un m&#233;dia.<br />
+                <strong>ACTEUR</strong> (Nom, Pr&#233;nom)
+            </p>
+            <ul>
+                <li>Nom : Correspond au nom de famille de l&apos;acteur (Cl&#233; primaire)</li>
+                <li>Pr&#233;nom : Correspond au pr&#233;nom de l&apos;acteur (Cl&#233; primaire)</li>
+            </ul>
+            <p>
+                Une cat&#233;gorie d&apos;un m&#233;dia.<br />
+                <strong>CATEGORIE</strong> (ID, libelle)
+            </p>
+            <ul>
+                <li>ID : Identifiant de la cat&#233;gorie (Cl&#233; primaire)</li>
+                <li>libelle : Correspond au nom de la cat&#233;gorie</li>
+            </ul>
+            <p>
+                Rapport &#224; l&apos;environnement.<br />
+                <strong>SENSIBILITE_ENVIRONNEMENTALE</strong> (ID, libelle)
+            </p>
+            <ul>
+                <li>ID : Identifiant de la cat&#233;gorie du sujet environnemental (Cl&#233; primaire)</li>
+                <li>libelle : Correspond au nom du sujet environnemental</li>
+            </ul>
+            <h3>Les Associations</h3>
+            <p>Un client regarde des films ou des s&#233;ries tous poss&#233;dant un titre. On y met ici les
+                informations sur la
+                progression du m&#233;dia.<br />
+                <strong>REGARDE_MEDIA</strong> (progression_ep, progression_saison, progression_temps)
+            </p>
+            <ul>
+                <li>progression_ep : Dans le cas d&apos;une s&#233;rie, cela correspond au num&#233;ro de
+                    l&apos;&#233;pisode
+                    courant. Dans le cas d&apos;un film, cette valeur sera mise NULL</li>
+                <li>progression_saison : Dans le cas d&apos;une s&#233;rie, cela correspond au num&#233;ro de la saison
+                    courante. Dans le cas d&apos;un film, cette valeur sera mise NULL</li>
+                <li>progression_temps : Correspond au temps de progression du film ou de l&apos;&#233;pisode courant
+                    de la s&#233;rie en nombre de minutes</li>
+            </ul>
+            <p>
+                Justification des cardinalit&#233;s : un client peut regarder 0 &#224; N m&#233;dias, de même un
+                m&#233;dia peut être
+                visionn&#233; par 0 &#224; N clients.<br />
+                Association liant MEDIA et CATEGORIE.<br /><br />
+                <strong>EST_DE_TYPE</strong><br />
+                Association liant MEDIA et CATEGORIE<br />
+                Justification des cardinalit&#233;s : Un m&#233;dia appartient &#224; une seule cat&#233;gorie et une
+                cat&#233;gorie peut contenir 0 &#224; N films.<br /><br />
+                <strong>JOUE_DANS</strong><br />
+                Association liant MEDIA &#224; ACTEUR<br />
+                Justification des cardinalit&#233;s : un acteur peut jouer dans 0 &#224; N films et un m&#233;dia peut
+                contenir 0 &#224; N acteurs (ici, 0 d&#233;crit le cas où aucun acteur notable n&apos;y a
+                jou&#233;).<br /><br />
+                <strong>PARLE_DE</strong><br />
+                Association liant MEDIA et SENSIBILITE_ENVIRONNEMENTALE<br />
+                Justification des cardinalit&#233;s : un m&#233;dia peut aborder de 0 &#224; N sujets environnementaux
+                et un sujet environnemental peut contenir 0 &#224; N m&#233;dias.<br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </p>
+        </div>
+        <div class="footer">
+            <p>Cette page a &#233;t&#233; &#233;crite par Yann, Mathis et Kawrantin</p>
+            <div class="nav">
+                <ul>
+                    <li><a href="https://validator.w3.org/#validate_by_uri+with_options" target="_blank">Lien de
+                            validation pour les fichier XHTML</a></li>
+                    <li><a href="https://www.xmlvalidation.com/" target="_blank">Lien de validation pour les fichier XML
+                            et DTD</a></li>
+                    <li><a href="https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_upload"
+                            target="_blank">Lien de validation pour les fichier CSS</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
